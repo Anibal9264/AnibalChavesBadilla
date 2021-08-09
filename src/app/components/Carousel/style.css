@@ -1,0 +1,39 @@
+.card-carrousel{
+    background-color: #F8F9F9  ;
+    animation-duration: 8s;
+    animation-name: slideinC;
+    height: 365px;
+}
+
+@media (min-width: 576px){
+.card-carrousel-3 {
+    height: 258px;
+}
+}
+@media (min-width: 768px){
+    .card-carrousel-1 {
+        height: 348px;
+    }
+}
+
+@media (min-width: 992px){
+    .card-carrousel-2 {
+        height: 464px;
+    }
+}
+
+@media (min-width: 1200px){
+    .card-carrousel-3 {
+        height: 365px;
+    }
+}
+
+.card-img{
+    background-color: black;
+    opacity: 0.5;
+}
+
+@keyframes slideinC {
+    from {right: -900px;}
+    to {right: 0px;}
+}

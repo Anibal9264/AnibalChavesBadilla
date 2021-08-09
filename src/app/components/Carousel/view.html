@@ -1,0 +1,19 @@
+<div class="card mt-2 p-1 card-carrousel card-carrousel-0 card-carrousel-1
+card-carrousel-2 card-carrousel-3">
+  <ngb-carousel #carousel [interval]="10000" >
+    <ng-template ngbSlide *ngFor="let dato of images">
+      <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+      <div class="carousel-caption">
+        <div class="card card-img">
+          <div class="card-body">
+            <h5 class="card-title">{{ dato['titulo'] }}</h5>
+            <p class="card-text"> {{dato['detalle']}}</p>
+          </div>
+        </div>
+      
+      </div>
+          <img class="d-block w-100 h-100" src="{{ dato['img'] }}" alt="">
+      </a>
+    </ng-template>
+  </ngb-carousel>
+</div>
