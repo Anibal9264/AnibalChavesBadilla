@@ -2,28 +2,24 @@
     background-color: #F8F9F9  ;
     animation-duration: 8s;
     animation-name: slideinC;
-    height: 365px;
 }
-
-@media (min-width: 576px){
-.card-carrousel-3 {
-    height: 258px;
+@media (min-width: 320px){
+    .img-6 {
+        height: 151px;
+}
+}
+@media (min-width: 375px){
+    .img-5 {
+        height: 179px;
+}
+}
+@media (min-width: 425px){
+    .img-4 {
+        height: 202px;
 }
 }
 @media (min-width: 768px){
-    .card-carrousel-1 {
-        height: 348px;
-    }
-}
-
-@media (min-width: 992px){
-    .card-carrousel-2 {
-        height: 464px;
-    }
-}
-
-@media (min-width: 1200px){
-    .card-carrousel-3 {
+    .img-3 {
         height: 365px;
     }
 }

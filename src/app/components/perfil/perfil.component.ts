@@ -21,7 +21,7 @@ export class PerfilComponent implements OnInit {
   constructor(public json: Jsonservice) { }
 
   ngOnInit(): void {
-      this.json.getJson('http://localhost/API/User_C.php').subscribe((res: any) =>{
+      this.json.getJson('https://anibalchavesbadilla.000webhostapp.com/User_C.php').subscribe((res: any) =>{
       this.foto = res['foto'];
       this.nombreC = res['nombreC'];
       this.detalleT = res['detalleT'];

@@ -13,7 +13,7 @@ export class Carousel{
     constructor(public json: Jsonservice) { }
 
     ngOnInit(): void {
-    this.json.getJson('http://localhost/API/Carousel_C.php').subscribe((res: any) =>{
+    this.json.getJson('https://anibalchavesbadilla.000webhostapp.com/Carousel_C.php').subscribe((res: any) =>{
     this.images  = res;
     })
     }

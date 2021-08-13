@@ -1,20 +1,33 @@
 <div class="card mt-2 card-perfil">
-    <div class="row"> 
-<div class="col-xl-12 col-md-4 col-sm-4">
-    <div class=" card-header">
-    <img src="data:image/png;base64,{{foto}}" class="card-img" alt="...">
-</div>
-</div>
-<div class="col-xl-12 col-md-8 col-sm-8">
-    <div class="card-body">
-        <h5 class="card-title">{{nombreC}}</h5>
-        <p class="card-text fw-bolder fs-6">{{detalleT}}</p>
-        <p class="card-text ">{{detalle}}</p>
-        <p class="card-text fw-bolder"><fa-icon [icon]="faEnvelope" class="me-2"> </fa-icon>{{email}}</p>
-        <p class="card-text fw-bolder"><fa-icon [icon]="faPhone" class="me-2"></fa-icon>{{telefono}}</p>
+    <div class="row">
+        <div class="col-xl-12 col-md-4 col-sm-4">
+            <div class="card-header">
+                <img src="data:image/png;base64,{{foto}}" class="card-img"
+                    alt="...">
+            </div>
+        </div>
+        <div class="col-xl-12 col-md-8 col-sm-8">
+            <div class="card-body">
+                <h5 class="card-title">{{nombreC}}</h5>
+                <p class="card-text fw-bolder fs-6">{{detalleT}}</p>
+                <p class="card-text">{{detalle}}</p>
+                <div class="row border rounded mb-1">
+                    <p class="card-text fw-bolder fs-6">HABILIDADES BLANDAS</p>
+                    <habilidades-blandas></habilidades-blandas>
+                </div>
+                <div class="row border rounded mb-1">
+                    <p class="card-text fw-bolder fs-6">IDIOMAS</p>
+                    <lenguales></lenguales>
+                </div>
+                <div class="row border rounded">
+                    <p class="card-text fw-bolder fs-6">CONTACTO</p>
+                    <p class="card-text fw-bolder"><fa-icon [icon]="faEnvelope"
+                            class="me-2"> </fa-icon>{{email}}</p>
+                    <p class="card-text fw-bolder"><fa-icon [icon]="faPhone"
+                            class="me-2"></fa-icon>{{telefono}}</p>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
-</div>
-</div>
-
-
