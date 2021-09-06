@@ -7,7 +7,7 @@ import { Jsonservice } from "src/app/jason.service";
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  datos = [];
+  datos = null;
   constructor(public json: Jsonservice) { }
 
   ngOnInit(): void {

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Jsonservice } from "src/app/jason.service";
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope,faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({

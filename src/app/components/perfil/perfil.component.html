@@ -2,8 +2,16 @@
     <div class="row">
         <div class="col-xl-12 col-md-4 col-sm-4">
             <div class="card-header">
-                <img src="data:image/png;base64,{{foto}}" class="card-img"
-                    alt="...">
+                <div *ngIf="foto; then thenBlock1; else elseBlock1"></div>
+                <ng-template #thenBlock1>
+                    <img src="data:image/png;base64,{{foto}}" class="card-img" alt="...">
+                </ng-template>
+                <ng-template #elseBlock1>
+                    <div class="spinner-border text-primary" role="status">
+                        <span class=" text-center sr-only">Loading...</span>
+                    </div>
+                </ng-template>
+                
             </div>
         </div>
         <div class="col-xl-12 col-md-8 col-sm-8">

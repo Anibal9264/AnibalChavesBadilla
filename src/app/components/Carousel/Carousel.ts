@@ -9,7 +9,14 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 })
 
 export class Carousel{
-    images = [];
+
+
+    images = [{
+        "img":null,
+        "titulo": null,
+        "detalle":"Cargando",
+        "link": null}
+    ];
     constructor(public json: Jsonservice) { }
 
     ngOnInit(): void {
@@ -17,6 +24,7 @@ export class Carousel{
     this.images  = res;
     })
     }
+
 }
 
 

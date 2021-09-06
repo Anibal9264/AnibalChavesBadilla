@@ -16,6 +16,7 @@ import { ReferenciasComponent } from './components/referencias/referencias.compo
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModalComponent } from './components/modal/modal.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const rutas: Routes = [
   { path: '', component: EstudiosComponent },
@@ -37,7 +38,8 @@ const rutas: Routes = [
     LengualesComponent,
     ReferenciasComponent,
     NavbarComponent,
-    ModalComponent
+    ModalComponent,
+    FooterComponent
   ], 
   imports: [
     BrowserModule,

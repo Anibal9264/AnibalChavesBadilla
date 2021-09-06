@@ -9,7 +9,6 @@ export class NavbarComponent implements OnInit {
  menuItems = [
    {linkId:1, linkName: 'Estudios', linkUrl:'estudios'},
    {linkId:2, linkName: 'Experiencia', linkUrl:'experiencia'},
-   {linkId:3, linkName: 'Projectos', linkUrl:'projectos'},
  ]
   constructor() { }
 

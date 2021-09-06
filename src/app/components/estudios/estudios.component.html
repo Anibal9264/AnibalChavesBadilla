@@ -1,29 +1,39 @@
 <div class="card mt-2">
   <div class="card-body">
     <h5 class="card-title fw-bolder fs-2">ESTUDIOS</h5>
-    <div class="card m-3" *ngFor="let dato of datos">
-      <div class="card-body">
-        <h5 class="card-title fw-bolder">{{ dato['lugar'] }}</h5>
-        <p class="card-text fw-lighter fw-bold">{{ dato['titulo'] }}</p>
-        <p class="card-text fw-light">{{ dato['descripcion'] }}</p>
-        <modal *ngIf="dato['img']"
-          [contenido]="dato['img']"
-          [tipo]="'img'"></modal>
+
+    <div *ngIf="datos; then thenBlock1; else elseBlock1"></div>
+    <ng-template #thenBlock1>
+      <div class="card m-3" *ngFor="let dato of datos">
+        <div class="card-body">
+          <h5 class="card-title fw-bolder">{{ dato['lugar'] }}</h5>
+          <p class="card-text fw-lighter fw-bold">{{ dato['titulo'] }}</p>
+          <p class="card-text fw-light">{{ dato['descripcion'] }}</p>
+          <modal *ngIf="dato['img']"
+            [contenido]="dato['img']"
+            [tipo]="'img'"></modal>
           <div *ngIf="dato['fecha_Fin']; then thenBlock; else elseBlock"></div>
           <ng-template #thenBlock>
-              <p class="card-text fw-light text-end">{{
-                  dato['fecha_inicio'] |
-                  date:'MMM YYYY' }} - {{ dato['fecha_Fin'] | date:'MMM
-                  YYYY'}}
-              </p>
+            <p class="card-text fw-light text-end">{{
+              dato['fecha_inicio'] |
+              date:'MMM YYYY' }} - {{ dato['fecha_Fin'] | date:'MMM
+              YYYY'}}
+            </p>
           </ng-template>
           <ng-template #elseBlock>
-              <p *ngIf="dato['fecha_inicio'];" class="card-text fw-light text-end">{{
-                  dato['fecha_inicio'] |
-                  date:'MMM YYYY' }} - Actualmente
-              </p>
+            <p *ngIf="dato['fecha_inicio'];" class="card-text fw-light
+              text-end">{{
+              dato['fecha_inicio'] |
+              date:'MMM YYYY' }} - Actualmente
+            </p>
           </ng-template>
+        </div>
       </div>
-    </div>
+    </ng-template>
+    <ng-template #elseBlock1>
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </ng-template>
   </div>
 </div>

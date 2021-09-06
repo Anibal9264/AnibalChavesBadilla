@@ -1,17 +1,33 @@
 <div class="card mt-2 p-1 card-carrousel">
-  <ngb-carousel #carousel [interval]="10000" >
+  <ngb-carousel #carousel [interval]="10000">
     <ng-template ngbSlide *ngFor="let dato of images">
-      <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-      <div class="carousel-caption">
-        <div class="card card-img">
-          <div class="card-body">
-            <h5 class="card-title">{{ dato['titulo'] }}</h5>
-            <p class="card-text"> {{dato['detalle']}}</p>
+      <a href="{{ dato['link']}}" target="_blank" rel="nofollow noopener
+        noreferrer">
+        <div class="carousel-caption">
+          <div class="card card-img">
+            <div class="card-body">
+              <div *ngIf="dato['titulo']; then thenBlock; else elseBlock"></div>
+              <ng-template #thenBlock>
+                <h5 class="card-title">{{ dato['titulo'] }}</h5>
+              </ng-template>
+              <ng-template #elseBlock>
+                <div class="spinner-border text-primary" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </ng-template>
+              <p class="card-text"> {{ dato['detalle'] }}</p>
+            </div>
           </div>
+
         </div>
-      
-      </div>
-          <img class="d-block w-100 img-3 img-4 img-5 img-6" src="{{ dato['img'] }}"  height="350px">
+        <div *ngIf="dato['img']; then thenBlock1; else elseBlock1"></div>
+        <ng-template #thenBlock1>
+        <img class="d-block w-100 img-3 img-4 img-5 img-6" src="{{ dato['img']
+          }}" height="350px">
+        </ng-template>
+        <ng-template #elseBlock1>
+           <div class="d-block w-100 img-3 img-4 img-5 img-6" height="350px"></div>
+        </ng-template>
       </a>
     </ng-template>
   </ngb-carousel>
